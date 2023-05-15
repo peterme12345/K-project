@@ -1,0 +1,59 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.UI;
+
+public class FillBar : MonoBehaviour
+{
+    public Slider slider;   
+    private bool condition = true;
+
+    private int previousNumChildren = 0;
+
+
+    public void updateSlider(float newVal){
+        slider.value += newVal;
+    }
+
+    
+
+    // Start is called before the first frame update
+    void Start()
+    {
+        slider.value = 0f;
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        GameObject PlayArea = GameObject.Find("PlayArea");
+        int numChildren = PlayArea.transform.childCount;
+
+
+
+        if (numChildren > previousNumChildren && condition)
+        {
+            updateSlider(.1f);
+            condition = false;
+        }
+  
+        condition = true;
+        
+        previousNumChildren = numChildren;
+
+/*
+        for (int i = 0; i < numChildren; i++) {
+            DisplayCard displayCard = PlayArea.transform.GetChild(i).GetComponent<DisplayCard>();
+
+            if (numChildren > previousNumChildren && displayCard.id == 0 && condition)
+            {
+                updateSlider(.1f);
+                condition = false;
+                break;
+            }
+            condition = true;
+            previousNumChildren = numChildren;
+        }
+        */
+    }
+}

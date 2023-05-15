@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 2ca65a455884b4de9a37650f643d0362
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - Hand: {instanceID: 0}
+  - HandCard: {instanceID: 0}
+  - Audio: {instanceID: 0}
+  - audioOb: {fileID: 7188044392559098014, guid: c1e7f383c866f4b67a247aa3cdf93c2a, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
