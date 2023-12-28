@@ -29,7 +29,7 @@ public class PlayerDeck : MonoBehaviour
         deckSize = 50;
 
         for (int i = 0; i<50; i++){
-            x = Random.Range(0,11);
+            x = Random.Range(0,12);
             deck[i] = Carddatabase.database[x];
         }
         StartCoroutine(StartGame());

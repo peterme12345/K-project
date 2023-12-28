@@ -13,10 +13,12 @@ public class Drag : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHand
     public AudioSource Dami;
     public AudioSource Sua;
     public AudioSource Handong;
+    public AudioSource Jisoo;
     public AudioSource Song;
     public GameObject card = null;
     private DisplayCard displayCard;
-  
+
+    
     public void OnBeginDrag(PointerEventData eventData)
     {
         
@@ -51,6 +53,10 @@ public class Drag : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHand
             Handong.time = 122;
             Handong.Play();
         }
+        else if (cardId==11){
+            Jisoo.time = 62;
+            Jisoo.Play();
+        }
         parentToReturnTo =this.transform.parent;
         this.transform.SetParent(this.transform.parent.parent);
         GetComponent<CanvasGroup>().blocksRaycasts = false;
@@ -75,15 +81,16 @@ public class Drag : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHand
         Handong.Stop();
         Siyeon.Stop();
         Jiu.Stop();
+        Jisoo.Stop();
         this.transform.SetParent(parentToReturnTo);
         GetComponent<CanvasGroup>().blocksRaycasts = true;
    
     }
     // Start is called before the first frame update
-    void Start()
+void Start()
     {
     }
-
+  
     // Update is called once per frame
     void Update()
     {
@@ -106,6 +113,9 @@ public class Drag : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHand
         }
         if(Gahyeon.time>=109){
             Gahyeon.time = 100f;
+        }
+        if(Jisoo.time>=70){
+            Jisoo.time = 62;
         }
 
     }
