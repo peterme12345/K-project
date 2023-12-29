@@ -14,6 +14,7 @@ public class Drag : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHand
     public AudioSource Sua;
     public AudioSource Handong;
     public AudioSource Jisoo;
+    public AudioSource Jennie;
     public AudioSource Song;
     public GameObject card = null;
     private DisplayCard displayCard;
@@ -25,7 +26,10 @@ public class Drag : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHand
         
         displayCard = card.GetComponent<DisplayCard>();
         int cardId = displayCard.id;
-       
+        if(cardId==0){
+            Song.time = 29;
+            Song.Play();
+        }
         if(cardId == 1){
             Yoohyeon.time = 34f;
             Yoohyeon.Play();
@@ -52,6 +56,10 @@ public class Drag : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHand
         else if (cardId==7){
             Handong.time = 122;
             Handong.Play();
+        }
+        else if (cardId==8){
+            Jennie.time = 51;
+            Jennie.Play();
         }
         else if (cardId==11){
             Jisoo.time = 62;
@@ -82,6 +90,8 @@ public class Drag : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHand
         Siyeon.Stop();
         Jiu.Stop();
         Jisoo.Stop();
+        Jennie.Stop();
+        Song.Stop();
         this.transform.SetParent(parentToReturnTo);
         GetComponent<CanvasGroup>().blocksRaycasts = true;
    
@@ -116,6 +126,12 @@ void Start()
         }
         if(Jisoo.time>=70){
             Jisoo.time = 62;
+        }
+         if(Jennie.time>=60){
+            Jennie.time = 51;
+        }
+        if(Song.time>=50){
+            Song.time = 29;
         }
 
     }
