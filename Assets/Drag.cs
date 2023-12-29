@@ -15,6 +15,7 @@ public class Drag : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHand
     public AudioSource Handong;
     public AudioSource Jisoo;
     public AudioSource Jennie;
+    public AudioSource Rose;
     public AudioSource Song;
 
     public AudioSource Lisa;
@@ -68,6 +69,10 @@ public class Drag : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHand
             Lisa.time = 47;
             Lisa.Play();
         }
+        else if (cardId==10){
+            Rose.time = 94;
+            Rose.Play();
+        }
         else if (cardId==11){
             Jisoo.time = 62;
             Jisoo.Play();
@@ -100,6 +105,7 @@ public class Drag : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHand
         Jennie.Stop();
         Song.Stop();
         Lisa.Stop();
+        Rose.Stop();
         this.transform.SetParent(parentToReturnTo);
         GetComponent<CanvasGroup>().blocksRaycasts = true;
    
@@ -143,6 +149,9 @@ void Start()
         }
         if(Lisa.time>=56){
             Lisa.time =47;
+        }
+        if(Rose.time>=103){
+            Rose.time =94;
         }
 
     }
