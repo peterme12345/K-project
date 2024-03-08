@@ -8,6 +8,8 @@ public class StartSceneController : MonoBehaviour
 {
     public string SampleScene;
     public string SettingScene;
+    public string StartScene;
+
     public void LoadScene()
     {
         SceneManager.LoadScene(SampleScene);
@@ -20,5 +22,7 @@ public class StartSceneController : MonoBehaviour
         SceneManager.LoadScene(SettingScene);
     }
     // Start is called before the first frame update
-   
+    public void Back(){
+        SceneManager.LoadScene(StartScene);
+    }
 }
