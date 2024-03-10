@@ -20,5 +20,10 @@ public class Carddatabase : MonoBehaviour
     database.Add(new Card(9,"Lisa",2,9,"Dancer",Resources.Load<Sprite>("1")));
     database.Add(new Card(10,"Rose",2,9,"Singer",Resources.Load<Sprite>("1")));
     database.Add(new Card(11,"Jisoo",2,9,"Singer",Resources.Load<Sprite>("1")));
+    database.Add(new Card(12,"Chaewon",2,8,"Singer",Resources.Load<Sprite>("1")));
+    database.Add(new Card(13,"Kazuha",2,9,"Singer",Resources.Load<Sprite>("1")));
+    database.Add(new Card(14,"Sakura",2,9,"Singer",Resources.Load<Sprite>("1")));
+    database.Add(new Card(15,"Yunjin",2,9,"Singer",Resources.Load<Sprite>("1")));
+    database.Add(new Card(16,"Eunchae",2,9,"Singer",Resources.Load<Sprite>("1")));
   }
 }
