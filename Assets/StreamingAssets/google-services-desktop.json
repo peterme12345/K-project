@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "403810048971",
+    "project_id": "k-project-417000",
+    "storage_bucket": "k-project-417000.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:403810048971:android:a8b8fc639a68304abe744e",
+        "android_client_info": {
+          "package_name": "com.iss.kproject"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCXpTAHHqVn_Fu96cFFP-3QeJtjMsBbar8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
