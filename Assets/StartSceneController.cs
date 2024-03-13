@@ -10,6 +10,8 @@ public class StartSceneController : MonoBehaviour
     public string SettingScene;
     public string StartScene;
 
+    public string BuildDeckScene;
+
     public void LoadScene()
     {
         SceneManager.LoadScene(SampleScene);
@@ -25,4 +27,8 @@ public class StartSceneController : MonoBehaviour
     public void Back(){
         SceneManager.LoadScene(StartScene);
     }
+    public void Deck(){
+        SceneManager.LoadScene(BuildDeckScene);
+    }
+
 }
