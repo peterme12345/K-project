@@ -8,7 +8,7 @@ using UnityEngine.UI;
 public class DropStorage : MonoBehaviour, IDropHandler, IPointerEnterHandler, IPointerExitHandler
 {
     public Text messageText;
-    public float fadeDuration = .5f;
+    public float fadeDuration = 2f;
 
     private Coroutine fadeOutCoroutine;
 
@@ -28,9 +28,12 @@ public class DropStorage : MonoBehaviour, IDropHandler, IPointerEnterHandler, IP
 
         // After fading, deactivate the message text
         messageText.gameObject.SetActive(false);
+        messageText.color=new Color(0,0,0,1);
     }
-    public void OnPointerEnter(PointerEventData eventData){
 
+
+
+    public void OnPointerEnter(PointerEventData eventData){
         
     }
 
@@ -41,15 +44,16 @@ public class DropStorage : MonoBehaviour, IDropHandler, IPointerEnterHandler, IP
         {
             Transform parentTransform = this.transform;
 
-            // Check if the number of children is less than 10 before allowing the drop
-            if (parentTransform.childCount < 10)
+            
+            if (parentTransform.childCount < 8)
             {
                 d.parentToReturnTo = parentTransform;
             }
             else
             {
-                messageText.text = "Limit reached - cannot drop more items.";
+
                 messageText.gameObject.SetActive(true);
+
                 fadeOutCoroutine = StartCoroutine(FadeOutMessage());
             }
         }
@@ -68,8 +72,11 @@ public class DropStorage : MonoBehaviour, IDropHandler, IPointerEnterHandler, IP
 
     }
 
+
     // Update is called once per frame
     void Update()
-    {
-    }
+{
+
+
+}
 }
